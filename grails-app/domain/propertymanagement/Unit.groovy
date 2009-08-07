@@ -9,7 +9,7 @@ class Unit {
 
     Address address
 
-	static hasMany = [tenants:Tenant, expenses:Expense, leads:Lead]
+	static hasMany = [tenants:Tenant, expenses:Expense, leads:Lead, receivables:Receivable]
 	static belongsTo = [property:Property]
 
     static constraints = {

@@ -22,6 +22,8 @@
                         <tr>
                         
                    	        <g:sortableColumn property="id" title="Id" />
+                   	        
+                   	        <g:sortableColumn property="unit" title="Unit" />
                         
                    	        <g:sortableColumn property="category" title="Category" />
                         
@@ -41,6 +43,8 @@
                         
                             <td><g:link action="show" id="${expenseInstance.id}">${fieldValue(bean:expenseInstance, field:'id')}</g:link></td>
                         
+                            <td>${fieldValue(bean:expenseInstance, field:'unit')}</td>
+                            
                             <td>${fieldValue(bean:expenseInstance, field:'category')}</td>
                         
                             <td>${fieldValue(bean:expenseInstance, field:'type')}</td>

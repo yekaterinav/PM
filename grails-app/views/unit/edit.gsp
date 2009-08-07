@@ -122,6 +122,22 @@
                                 </td>
                             </tr> 
                         
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="receivables">Receivables:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:unitInstance,field:'receivables','errors')}">
+                                    
+<ul>
+<g:each var="r" in="${unitInstance?.receivables?}">
+    <li><g:link controller="receivable" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
+</g:each>
+</ul>
+<g:link controller="receivable" params="['unit.id':unitInstance?.id]" action="create">Add Receivable</g:link>
+
+                                </td>
+                            </tr> 
+                        
                         </tbody>
                     </table>
                 </div>

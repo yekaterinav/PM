@@ -103,6 +103,19 @@
                             
                         </tr>
                     
+                        <tr class="prop">
+                            <td valign="top" class="name">Receivables:</td>
+                            
+                            <td  valign="top" style="text-align:left;" class="value">
+                                <ul>
+                                <g:each var="r" in="${unitInstance.receivables}">
+                                    <li><g:link controller="receivable" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
+                                </g:each>
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                    
                     </tbody>
                 </table>
             </div>
